@@ -51,6 +51,21 @@ Version 1.0.7 (in progress in the dev branch)
 * Added Animation.paused - can be set to true/false.
 * New: Phaser.Animation.generateFrameNames - really useful when creating animation data from texture atlases using file names, not indexes.
 * Added Sprite.play as a handy short-cut to play an animation already loaded onto a Sprite.
+* Fixed small bug stopping Tween.pause / resume from resuming correctly when called directly.
+* Fixed an issue where Tweens.removeAll wasn't clearing tweens in the addition queue.
+* Change: When you swap State all active tweens are now purged.
+* BUG: Loader conflict if 2 keys are the same even if they are in different packages (i.e. "title" for picture and audio).
+* Fixed Particle Emitters when using Emitter width/height (thanks XekeDeath)
+* Made animation looping more robust when skipping frames (thanks XekeDeath)
+* Fix for incorrect new particle positioning (issue #73) (thanks cottonflop)
+* Added support for Body.maxVelocity (thanks cocoademon)
+* Fixed issue in Sound.play where if you gave a missing marker it would play the whole sound sprite instead.
+* Button.setFrames will set the current frame based on the button state immediately.
+* InputHandler now creates the _pointerData array on creation and populates with one empty set of values, so pointerOver etc all work before a start call.
+* Added Canvas.setUserSelect() to disable touchCallouts and user selections within the canvas.
+* When the game boots it will now by default disable user-select and touch action events on the game canvas.
+* Loaded.setPreloadSprite now rounds the width/height values and starts from 1. This fixes canvas draw errors in IE9/10 and Firefox.
+
 
 
 * TODO: addMarker hh:mm:ss:ms
