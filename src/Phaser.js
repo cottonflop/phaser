@@ -1,10 +1,16 @@
 /**
- * @module Phaser
- */
-var Phaser = Phaser || { 
+* @author       Richard Davey <rich@photonstorm.com>
+* @copyright    2013 Photon Storm Ltd.
+* @license      {@link https://github.com/photonstorm/phaser/blob/master/license.txt|MIT License}
+*/
 
-	VERSION: '1.0.7-beta', 
-	GAMES: [], 
+/**
+* @namespace Phaser
+*/
+var Phaser = Phaser || {
+
+	VERSION: '<%= version %>',
+	GAMES: [],
 	AUTO: 0,
 	CANVAS: 1,
 	WEBGL: 2,
